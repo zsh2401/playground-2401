@@ -1,6 +1,9 @@
 import React, { useContext, useMemo, useState } from 'react';
 import { Router, Route, Switch } from 'react-router';
 import IndexPage from './view/pages/IndexPage';
+import VF from "./view/pages/VectorsField"
+import ComplexPage from "./view/pages/ComplexPage"
+import Relativity from "./view/pages/Relativity"
 import NotFoundPage from './view/pages/NotFoundPage';
 import Layout from './view/components/Layout';
 import AppContext from "./AppContext"
@@ -27,15 +30,18 @@ export default function AppRouter() {
             setNavbarVisible(value)
         },
     }}>
+        <Router history={history}>
+            <Layout>
 
-        <Layout>
-            <Router history={history}>
                 <Switch>
                     <Route exact path="/" component={IndexPage}></Route>
+                    <Route exact path="/llz" component={Relativity}></Route>
+                    <Route exact path="/v" component={VF}></Route>
+                    <Route exact path="/c" component={ComplexPage}></Route>
                     <Route path="*" component={NotFoundPage}></Route>
                 </Switch>
-            </Router>
-        </Layout>
 
-    </AppContext.Provider>
+            </Layout>
+        </Router>
+    </AppContext.Provider >
 }

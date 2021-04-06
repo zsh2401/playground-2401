@@ -104,9 +104,9 @@ const config: webpack.Configuration = {
 
 		//@ts-ignore
 		new WebpackPwaManifest({
-			name: pkgInfo.name,
-			short_name: pkgInfo.name,
-			description: pkgInfo.description,
+			name: "Seymour Zhang's Computer Science Playground",
+			short_name: "SZCS",
+			description: "Just 4 fun!",
 			background_color: "#ffffff",
 			icons: [
 				{

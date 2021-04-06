@@ -1,5 +1,5 @@
 {
-  "name": "sz-rat-app",
+  "name": "playground-2401",
   "version": "2.1.0",
   "sz_rat": {
     "version": "12.0.0",
@@ -80,6 +80,8 @@
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-use": "^17.2.1",
-    "sz-react-support": "^0.0.5"
+    "rsuite": "^4.9.3",
+    "sz-react-support": "^0.0.5",
+    "tdscore": "^0.1.26"
   }
 }

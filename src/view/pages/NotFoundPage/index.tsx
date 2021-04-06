@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { HWCenter } from '../../../sz-ui';
+import HWCenter from '../../../sz-ui/HWCenter';
 
 export default function NotFoundPage() {
     return <HWCenter style={{ textAlign: "center" }}>
