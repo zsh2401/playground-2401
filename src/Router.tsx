@@ -1,14 +1,12 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Router, Route, Switch } from 'react-router';
 import IndexPage from './view/pages/IndexPage';
-import VF from "./view/pages/VectorsField"
-import ComplexPage from "./view/pages/ComplexPage"
-import Relativity from "./view/pages/Relativity"
 import NotFoundPage from './view/pages/NotFoundPage';
 import Layout from './view/components/Layout';
 import AppContext from "./AppContext"
 import { createHashHistory } from "history"
-
+import { apps } from "./common/app-registration"
+import AppPage from "./view/pages/AppPage"
 export default function AppRouter() {
 
     const history = useMemo(() => createHashHistory(), []);
@@ -17,6 +15,7 @@ export default function AppRouter() {
 
     return <AppContext.Provider value={{
         history,
+        apps,
         get footbarVisible(): boolean {
             return footbarVisible
         },
@@ -35,9 +34,7 @@ export default function AppRouter() {
 
                 <Switch>
                     <Route exact path="/" component={IndexPage}></Route>
-                    <Route exact path="/llz" component={Relativity}></Route>
-                    <Route exact path="/v" component={VF}></Route>
-                    <Route exact path="/c" component={ComplexPage}></Route>
+                    <Route exact path="/app/:aid" component={AppPage}></Route>
                     <Route path="*" component={NotFoundPage}></Route>
                 </Switch>
 

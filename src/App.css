@@ -2,10 +2,13 @@
 :global(.text-center){
     text-align: center;
 }
-:global(*){
+/* :global(*){
     font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
     margin: 0;
     padding: 0;
+} */
+:global(body){
+    background-color: #F7F7FA;
 }
 :global(.safe-area){
     width: 100%;

@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IStdProps } from 'sz-react-support'
 import Header from "./Header"
 import Footer from "./Footer"
 //@ts-expect-error
 import css from "./index.css"
+import { useAppContext } from '../../../AppContext'
+import { Container, Header as RHeader, Footer as RFooter, Content } from 'rsuite'
 export default function (props: IStdProps) {
-    return <div>
-        <div className={css.layout}>
+    const ctx = useAppContext()
 
-            <Header className={css.header} />
+    return <Container style={{ minHeight: "100%", minWidth: "100%" }}>
+        <RHeader>
+            <Header></Header>
+        </RHeader>
 
-            <div className={css.body}>
-                {props.children}
-            </div>
+        <Content>
+            {props.children}
+        </Content>
 
-            <Footer className={css.footer} />
-        </div>
-    </div>
+        <Footer></Footer>
+
+    </Container>
+    // return <div>
+    //     <div className={css.layout}>
+
+    //         {
+    //             ctx.navbarVisible && <Header className={css.header} />
+    //         }
+
+
+    //         <div className={css.body}>
+
+    //         </div>
+
+    //         <Footer className={css.footer} />
+    //     </div>
+    // </div>
 }

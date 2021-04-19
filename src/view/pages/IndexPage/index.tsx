@@ -1,13 +1,57 @@
-import React from 'react'
-import { DSNumber, math as DSMath } from 'tdscore'
-import { Vector2 } from 'tdscore/lib/math'
-import Transformation from 'tdscore/lib/math/linear-algebra/Transformation'
-import Graph2D from "../../components/Graph2D"
+import React, { useEffect } from 'react'
+import { Button, Container, Content, Panel } from 'rsuite'
+import { useAppContext } from '../../../AppContext'
+import Footer from '../../components/Layout/Footer'
+import Header from '../../components/Layout/Header'
+//@ts-ignore
+import css from "./index.css"
+
 export default function () {
 
-  return <div style={{ width: "100%", height: "100%" }}>
-    
-    <Graph2D
+  const ctx = useAppContext()
+
+  // useEffect(() => {
+  //   ctx.navbarVisible = false
+  //   return () => {
+  //     ctx.navbarVisible = true
+  //   }
+  // }, [])
+
+  return <div>
+    {/* <div className={css["head-box"]}>
+      <div>
+        
+      </div>
+    </div> */}
+
+    <div>
+      <h3>Seymour Zhang's</h3>
+      <h1>Computer Science <br />Playground</h1>
+    </div>
+
+    {
+      ctx.apps.map(app => {
+        return <Panel bordered shaded bodyFill style={{ margin: "10px", display: 'inline-block', width: 240 }}>
+          <img src={app.icon} height="240" />
+          <Panel header={app.label}>
+            <p>
+              <small>
+                {app.descrition}
+              </small>
+            </p>
+            <Button onClick={()=>{
+              ctx.history.push(`/app/${app.id}`)
+            }}>使用 Go </Button>
+          </Panel>
+        </Panel>
+      })
+    }
+
+    {/* <div className={css["apps"]}>
+      
+    </div> */}
+    {/* <div className={css["head-img"]} src=""></div> */}
+    {/* <Graph2D
       mark="sin(x)"
       scaleRatio={150}
       vectors={[
@@ -42,6 +86,6 @@ export default function () {
           y: DSMath.sin(DSMath.PI / 2)
         }]
       }
-    ></Graph2D>
+    ></Graph2D> */}
   </div >
 }
