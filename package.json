@@ -73,6 +73,7 @@
     "workbox-webpack-plugin": "^6.1.2"
   },
   "dependencies": {
+    "antd": "^4.15.2",
     "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
@@ -80,7 +81,6 @@
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-use": "^17.2.1",
-    "rsuite": "^4.9.3",
     "sz-react-support": "^0.0.5",
     "tdscore": "^0.1.26"
   }

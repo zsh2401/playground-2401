@@ -1,7 +1,9 @@
 // import "!!style-loader!css-loader?modules=false!bootstrap/dist/css/bootstrap.min.css"
 // import "jquery"
 // import "bootstrap"
-import "!!style-loader!css-loader?modules=false!rsuite/dist/styles/rsuite-default.css"
+// import "!!style-loader!css-loader?modules=false!rsuite/dist/styles/rsuite-default.css"
+import "!!style-loader!css-loader?modules=false!antd/dist/antd.min.css"
+// import "antd/dist/" 
 import "./App.css"
 import React from 'react';
 import ReactDOM from 'react-dom';

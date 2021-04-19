@@ -1,39 +1,29 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { IStdProps } from 'sz-react-support'
-import Header from "./Header"
-import Footer from "./Footer"
-//@ts-expect-error
-import css from "./index.css"
+// import Header from "./Header"
+// import Footer from "./Footer"
 import { useAppContext } from '../../../AppContext'
-import { Container, Header as RHeader, Footer as RFooter, Content } from 'rsuite'
 export default function (props: IStdProps) {
     const ctx = useAppContext()
 
-    return <Container style={{ minHeight: "100%", minWidth: "100%" }}>
-        <RHeader>
-            <Header></Header>
-        </RHeader>
+    return <div style={{
+        display: "flex", flexDirection: "column",
+        minHeight: "100%", minWidth: "100%"
+    }}>
 
-        <Content>
+        {/* {ctx.navbarVisible && <Header />} */}
+
+        <div style={{
+            flexGrow: 1
+        }}>
             {props.children}
-        </Content>
-
-        <Footer></Footer>
-
-    </Container>
-    // return <div>
-    //     <div className={css.layout}>
-
-    //         {
-    //             ctx.navbarVisible && <Header className={css.header} />
-    //         }
+        </div>
 
 
-    //         <div className={css.body}>
-
-    //         </div>
-
-    //         <Footer className={css.footer} />
-    //     </div>
-    // </div>
+        {/* {ctx.footbarVisible && <Footer style={{
+            width: "100%",
+            textAlign: "center",
+            flexGrow: 0
+        }} />} */}
+    </div>
 }
