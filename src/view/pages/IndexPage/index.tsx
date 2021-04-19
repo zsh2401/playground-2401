@@ -6,9 +6,7 @@ import css from "./index.css"
 import Meta from 'antd/lib/card/Meta'
 import { Vector2 } from 'tdscore/lib/math'
 import Graph2D from '../../components/Graph2D'
-import Transformation2 from 'tdscore/lib/math/linear-algebra/Transformation2'
-import { DSMath } from 'tdscore'
-import Transformation from 'tdscore/lib/math/linear-algebra/Transformation'
+import { math as DSMath } from 'tdscore'
 export default function () {
 
   const ctx = useAppContext()
@@ -43,16 +41,18 @@ export default function () {
         width="600px" height="200px"
         grid
         specialPoints={
-          [{
-            pointName: "π/2",
-            x: DSMath.PI / 2,
-            y: 0
-          },
-          {
-            pointName: "sin(π/2) = 1",
-            x: DSMath.PI / 2,
-            y: DSMath.sin(DSMath.PI / 2)
-          }]
+          [
+          //   {
+          //   pointName: "π/2",
+          //   x: DSMath.PI / 2,
+          //   y: 0
+          // },
+          // {
+          //   pointName: "sin(π/2) = 1",
+          //   x: DSMath.PI / 2,
+          //   y: DSMath.sin(DSMath.PI / 2)
+          // }
+        ]
         }
       ></Graph2D>
     </div>

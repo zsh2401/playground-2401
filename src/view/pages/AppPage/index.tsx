@@ -4,6 +4,7 @@ import { useAppContext } from "../../../AppContext"
 import { Route } from "react-router"
 import { App } from "../../../common/app-registration"
 import { useWindowSize } from "react-use"
+import { Card } from "antd"
 export default function () {
 
     const { aid } = useParams<{ aid: string }>()
@@ -14,15 +15,25 @@ export default function () {
             .find(app => app.id === aid)
     }, [aid])
 
-    return <div>
+    return <div style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center"
+    }}>
         {app === undefined ? <NotFound /> : <Found app={app}></Found>}
     </div>
 }
 function Found(props: { app: App }) {
     const { app } = props
     return <div>
-        {app.label}
+        <h1 style={{
+            textAlign: "center",
+        }}>
+            {app.label}
+        </h1>
+
         <app.component />
+
     </div>
 }
 function NotFound() {

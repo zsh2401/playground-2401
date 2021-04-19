@@ -2,8 +2,9 @@ import React, { useCallback, useState } from "react"
 import { Vector2 } from "tdscore/lib/math"
 import HWCenter from "../../../sz-ui/HWCenter"
 import Graph2D from "../../components/Graph2D"
-import LorentzTransformationXT from "tdscore/lib/math/relativity/LorentzTransformationXT"
+import LorentzTransformationXT from "tdscore/lib/math/martix/LorentzTransformationXT"
 import { useWindowSize } from "react-use"
+import { Slider } from "antd"
 // import { Button, ButtonGroup, SelectPicker, Slider } from "rsuite"
 interface Item {
     name: string;
@@ -35,18 +36,15 @@ export default function () {
     }, []);
 
     return <div style={{ marginLeft: "20px", marginRight: "20px" }}>
-        <h1>对于A以{v}%光速运动的物体的视角</h1>
+        <p>对于静止物体以{v}%光速运动的物体的视角</p>
         <br />
-        {/* <Slider value={v} onChange={vSetter} progress></Slider> */}
+        <Slider value={v} onChange={vSetter}></Slider>
         <HWCenter>
             <Graph2D
                 scaleRatio={50}
                 width={(width * 0.8).toString()}
                 height={(height * 0.5).toString()}
                 grid
-                // fns={
-                //     [{ name: "sin", f: Math.sin }]
-                // }
                 transformation={new LorentzTransformationXT(f(T, v / 100).x, T, C)}
                 vectors={[
                     ...items.map(item => {

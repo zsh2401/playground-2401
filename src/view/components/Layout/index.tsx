@@ -11,19 +11,10 @@ export default function (props: IStdProps) {
         minHeight: "100%", minWidth: "100%"
     }}>
 
-        {/* {ctx.navbarVisible && <Header />} */}
-
         <div style={{
             flexGrow: 1
         }}>
             {props.children}
         </div>
-
-
-        {/* {ctx.footbarVisible && <Footer style={{
-            width: "100%",
-            textAlign: "center",
-            flexGrow: 0
-        }} />} */}
     </div>
 }

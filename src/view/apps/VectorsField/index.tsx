@@ -15,12 +15,12 @@ export default function () {
     return <Graph2D
         width="1200"
         height="600"
-        transformation={new Martix(
-            [
-                [3, 0.3],
-                [0, 1]
-            ]
-        )}
+        // transformation={new Martix(
+        //     [
+        //         [3, 0.3],
+        //         [0, 1]
+        //     ]
+        // )}
         grid
         scaleRatio={20}
         vectors={vectors}
