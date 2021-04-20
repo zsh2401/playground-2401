@@ -5,8 +5,6 @@ import WebpackPwaManifest from "webpack-pwa-manifest"
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import WorkboxPlugin from "workbox-webpack-plugin"
-import pkgInfo from "./package.json"
-import BundleAnalyzerPlugin from "webpack-bundle-analyzer"
 
 const config: webpack.Configuration = {
 	entry: {
