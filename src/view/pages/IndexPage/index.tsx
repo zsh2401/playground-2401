@@ -42,17 +42,17 @@ export default function () {
         grid
         specialPoints={
           [
-          //   {
-          //   pointName: "π/2",
-          //   x: DSMath.PI / 2,
-          //   y: 0
-          // },
-          // {
-          //   pointName: "sin(π/2) = 1",
-          //   x: DSMath.PI / 2,
-          //   y: DSMath.sin(DSMath.PI / 2)
-          // }
-        ]
+            //   {
+            //   pointName: "π/2",
+            //   x: DSMath.PI / 2,
+            //   y: 0
+            // },
+            // {
+            //   pointName: "sin(π/2) = 1",
+            //   x: DSMath.PI / 2,
+            //   y: DSMath.sin(DSMath.PI / 2)
+            // }
+          ]
         }
       ></Graph2D>
     </div>
@@ -62,18 +62,18 @@ export default function () {
       marginTop: "10px",
       textAlign: "center"
     }}>
-      <h1>Seymour Zhang's <br/>Computer Science Playground</h1>
+      <h1>Seymour Zhang's <br />Computer Science Playground</h1>
     </div>
 
     <p style={{ textAlign: "center" }}>目前已有 {ctx.apps.length} 个应用</p>
-    
+
     <div style={{
       display: "flex",
       justifyContent: "center",
     }}>
       {
         ctx.apps.map(app => {
-          return <Card onClick={() => {
+          return <Card key={app.id} onClick={() => {
             ctx.history.push(`/app/${app.id}`)
           }} bordered hoverable style={{
             borderRadius: "10px", width: "240", margin: "10px"
