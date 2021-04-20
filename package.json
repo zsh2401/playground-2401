@@ -82,6 +82,6 @@
     "react-router-dom": "^5.2.0",
     "react-use": "^17.2.1",
     "sz-react-support": "^0.0.5",
-    "tdscore": "^0.1.31"
+    "tdscore": "^0.1.32"
   }
 }
