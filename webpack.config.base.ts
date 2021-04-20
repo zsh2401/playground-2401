@@ -108,6 +108,7 @@ const config: webpack.Configuration = {
 			short_name: "SZCS",
 			description: "Just 4 fun!",
 			background_color: "#ffffff",
+			start_url: "/",
 			icons: [
 				{
 					src: path.resolve(__dirname, "assets/icons/icon.png"),
@@ -124,7 +125,7 @@ const config: webpack.Configuration = {
 			],
 		}),
 
-		new WorkboxPlugin.GenerateSW({ swDest: "js/sw.js" }),
+		new WorkboxPlugin.GenerateSW(),
 	],
 
 	optimization: {
@@ -135,7 +136,7 @@ const config: webpack.Configuration = {
 		}
 	},
 
-	
+
 	devServer: {
 		contentBase: path.join(__dirname, './dist'),
 		open: false,
