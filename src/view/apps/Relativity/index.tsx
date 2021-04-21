@@ -36,7 +36,7 @@ export default function () {
     }, []);
 
     return <div style={{ marginLeft: "20px", marginRight: "20px" }}>
-        <p>对于静止物体以{v}%光速运动的物体的视角</p>
+        <p>对于静止物体以{v}%光速({((v / 100) * 299792.458).toFixed(2)}km/s)运动的物体的视角</p>
         <br />
         <Slider value={v} onChange={vSetter}></Slider>
         <HWCenter>
