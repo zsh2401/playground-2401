@@ -1,16 +1,16 @@
 import React, { useMemo } from "react"
-import { Switch, useParams } from "react-router"
+import { useParams } from "react-router"
 import { useAppContext } from "../../../AppContext"
-import { Route } from "react-router"
 import { App } from "../../../common/app-registration"
-import { useWindowSize } from "react-use"
-import { Card } from "antd"
+import { PageHeader } from "antd"
+import NotFoundPage from "../NotFoundPage"
 export default function () {
 
     const { aid } = useParams<{ aid: string }>()
+    const ctx = useAppContext()
 
     const app = useMemo(() => {
-        return useAppContext()
+        return ctx
             .apps
             .find(app => app.id === aid)
     }, [aid])
@@ -25,19 +25,30 @@ export default function () {
 }
 function Found(props: { app: App }) {
     const { app } = props
-    return <div>
-        <h1 style={{
-            textAlign: "center",
+    const ctx = useAppContext()
+    return <div style={{
+        backgroundColor: "white",
+        height: "100%",
+        width: "100%",
+        margin: "10px",
+        padding: "20px"
+    }}>
+        <PageHeader onBack={
+            () => ctx.history.goBack()
+        } title={app?.label} subTitle={app?.descrition}
+        />
+        <div style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "flex-start"
         }}>
-            {app.label}
-        </h1>
-
-        <app.component />
+            <app.component />
+        </div>
 
     </div>
+
 }
 function NotFound() {
-    return <div>
-        App not found!
-    </div>
+    return <NotFoundPage />
 }

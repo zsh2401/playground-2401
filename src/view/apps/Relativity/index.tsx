@@ -41,7 +41,7 @@ export default function () {
         <Slider value={v} onChange={vSetter}></Slider>
         <HWCenter>
             <Graph2D
-                scaleRatio={50}
+                scaleRatio={30}
                 width={(width * 0.8).toString()}
                 height={(height * 0.5).toString()}
                 grid

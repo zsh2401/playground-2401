@@ -64,15 +64,12 @@ export default function (props: Props) {
 
     }, [props]);
 
-    return <div style={{ paddingTop: "20px" }}>
-        {/* <Metadata scale={scaleRatio} fns={fns} t={transformation} vectors={vectors} /> */}
-        <canvas
-            width={props.width ?? "200px"}
-            height={props.height ?? "200px"}
-            // style={{ backgroundColor: "yellowgreen" }}
-            ref={canvasRef}>
-        </canvas>
-    </div>
+    return <canvas
+        width={props.width ?? "200px"}
+        height={props.height ?? "200px"}
+        // style={{ backgroundColor: "yellowgreen" }}
+        ref={canvasRef}>
+    </canvas>
 }
 
 class Mapping2DContextWrapper {
