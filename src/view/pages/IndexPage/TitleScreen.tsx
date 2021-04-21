@@ -7,7 +7,7 @@ export default function () {
     const width = max(useWindowSize().width / 2, 300)
 
     return <div>
-        <br/>
+        <br />
         <div style={{
             display: "flex",
             flexDirection: "row",
@@ -38,7 +38,9 @@ export default function () {
             textAlign: "center"
         }}>
             <h2>Seymour Zhang's <br />Computer Science Playground</h2>
-            <p>Powered by TDSCore</p>
+            <p>Powered by 
+                <a href="https://ds.zsh2401.top" target="_blank"> TDSCore</a>
+            </p>
         </div>
     </div>
 }

@@ -35,7 +35,7 @@ export default function () {
                                 <br />
                                 <Row>
                                     {
-                                        app.tags.map(tag => <Col>
+                                        app.tags.map(tag => <Col key={tag}>
                                             <Tag color={colorMap.get(tag) ?? "default"} >{tag}</Tag>
                                         </Col>)
                                     }
