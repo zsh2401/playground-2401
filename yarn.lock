@@ -8463,10 +8463,10 @@ tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.npm.taobao.org/tapable/download/tapable-2.2.0.tgz?cache=0&sync_timestamp=1607088902003&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftapable%2Fdownload%2Ftapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
   integrity sha1-XDc9KB2cZyhIIT0OA30cQWWrQms=
 
-tdscore@^0.1.32:
-  version "0.1.32"
-  resolved "https://registry.npmjs.org/tdscore/-/tdscore-0.1.32.tgz#06d074101899f4396189f0031cb4e946996c97d7"
-  integrity sha512-hsRoaRykp/DVqD+EMxS+NQ485U3nt4TkzCr/BXymvetutyzwmnXHPhpb9dAC/UcHI6dd7g39FUrw4rH7gDf7hA==
+tdscore@^0.1.34:
+  version "0.1.34"
+  resolved "https://registry.npmjs.org/tdscore/-/tdscore-0.1.34.tgz#aad00c05d2421ad942bf90c051421d5276ca22ca"
+  integrity sha512-g68aH96erJkUmZWSl/puF3DllZVagzEDv/Ft/uXW1tQdx1a4vMCmvDGhZqRmt/SS14CUbar5G9ITvCKZGuk4BA==
   dependencies:
     bignumber.js "^9.0.1"
     sha256 "^0.2.0"
