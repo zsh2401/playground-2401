@@ -1,11 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, {  } from 'react';
 import { Router, Route, Switch } from 'react-router';
 import IndexPage from './view/pages/IndexPage';
 import NotFoundPage from './view/pages/NotFoundPage';
 import Layout from './view/components/Layout';
-import AppContext, { useAppContext } from "./AppContext"
-import { createHashHistory } from "history"
-import { apps } from "./common/app-registration"
+import { useAppContext } from "./AppContext"
 import AppPage from "./view/pages/AppPage"
 export default function AppRouter() {
 
