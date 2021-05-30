@@ -1,12 +1,16 @@
+import "!!style-loader!css-loader?modules=false!nprogress/nprogress.css"
+
 import "!!style-loader!css-loader?modules=false!antd/dist/antd.min.css"
 import "./App.css"
 
+import "nprogress"
 import React, { useMemo, useState } from 'react';
 import ReactDOM from "react-dom"
 import Router from "./Router"
 import AppContext from "./AppContext"
 import { createHashHistory } from "history"
 import { apps } from "./common/app-registration"
+import "tdscore"
 
 export default function () {
     ReactDOM.render(<App />

@@ -28,7 +28,8 @@ async function registerServiceWorker() {
 }
 
 async function downloadAndRunApplication() {
-    const app = await import("./App");
+
+    const app = await import(/* webpackChunkName: "full_app" */"./App");
     app.default();
 
 }

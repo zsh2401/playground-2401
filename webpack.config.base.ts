@@ -9,7 +9,6 @@ import WorkboxPlugin from "workbox-webpack-plugin"
 const config: webpack.Configuration = {
 	entry: {
 		app: path.resolve(__dirname, './src/AppLoader.ts'),
-		"404": path.resolve(__dirname, './src/404redirector.ts')
 	},
 
 	output: {
@@ -43,7 +42,6 @@ const config: webpack.Configuration = {
 			},
 		]
 	},
-	// externals: helper.EXTERNALS,
 
 	plugins: [
 
@@ -60,18 +58,18 @@ const config: webpack.Configuration = {
 			chunks: ["app"]
 		}),
 
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, "./src/AppPage.html"),
-			favicon: path.resolve(__dirname, "assets/icons/icon.ico"),
-			filename: "404.html",
-			title: "404redictor",
-			minify: { // 压缩HTML文件
-				removeComments: true, // 移除HTML中的注释
-				collapseWhitespace: true, // 删除空白符与换行符
-				minifyCSS: true// 压缩内联css
-			},
-			chunks: ["404"]
-		}),
+		// new HtmlWebpackPlugin({
+		// 	template: path.resolve(__dirname, "./src/AppPage.html"),
+		// 	favicon: path.resolve(__dirname, "assets/icons/icon.ico"),
+		// 	filename: "404.html",
+		// 	title: "404redictor",
+		// 	minify: { // 压缩HTML文件
+		// 		removeComments: true, // 移除HTML中的注释
+		// 		collapseWhitespace: true, // 删除空白符与换行符
+		// 		minifyCSS: true// 压缩内联css
+		// 	},
+		// 	chunks: ["404"]
+		// }),
 
 		//@ts-ignore
 		new CopyWebpackPlugin({
@@ -129,7 +127,7 @@ const config: webpack.Configuration = {
 	optimization: {
 		splitChunks: {
 			chunks: 'async',
-			minSize: 20000,
+			minSize: 20_000,
 			minRemainingSize: 0,
 		}
 	},

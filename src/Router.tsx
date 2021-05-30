@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React from 'react';
 import { Router, Route, Switch } from 'react-router';
 import IndexPage from './view/pages/IndexPage';
 import NotFoundPage from './view/pages/NotFoundPage';

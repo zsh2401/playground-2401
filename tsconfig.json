@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "ES2020",
+    "module": "CommonJS",
     "target": "ES6",
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": false,
     "jsx": "react",
     "lib": [
-      "ES2015","DOM"
+      "ES6",
+      "DOM"
     ],
     "resolveJsonModule": true,
     "removeComments": true,
