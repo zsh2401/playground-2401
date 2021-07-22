@@ -1,27 +1,28 @@
 {
   "compilerOptions": {
-    "module": "ES2020",
-    "target": "ES6",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "esModuleInterop": false,
-    "jsx": "react",
+    "target": "ESNext",
     "lib": [
-      "ES2015","DOM"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "removeComments": true,
-    "strictNullChecks": true,
-    "experimentalDecorators": true,
-    "strictBindCallApply": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "allowSyntheticDefaultImports": true
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
   },
   "include": [
-    "./src/*",
-    "src/app/server.ts",
-    "src/common/debug-mx"
+    "./src"
   ],
   "exclude": [
     "node_modules"

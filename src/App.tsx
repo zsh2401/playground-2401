@@ -1,4 +1,4 @@
-import "!!style-loader!css-loader?modules=false!antd/dist/antd.min.css"
+import "antd/dist/antd.min.css"
 import "./App.css"
 
 import React, { useMemo, useState } from 'react';
@@ -14,7 +14,7 @@ export default function () {
 }
 
 function App() {
-
+    console.log("run app")
     const history = useMemo(() => createHashHistory(), [])
     const [navbarVisible, setNavbarVisible] = useState(true)
     const [footbarVisible, setFootbarVisible] = useState(true)

@@ -4,6 +4,9 @@ import VectorsField from "../view/apps/VectorsField"
 import ComplexPanel from "../view/apps/ComplexPanel"
 import { LiteralUnion } from "antd/lib/_util/type";
 import { PresetColorType, PresetStatusColorType } from "antd/lib/_util/colors";
+import RelativityCover from "../view/apps/Relativity/cover.jpg";
+import ComplexCover from "../view/apps/ComplexPanel/cover2.png"
+import VectorsFieldCover from "../view/apps/VectorsField/cover.png";
 export interface App {
     label: string
     descrition: string
@@ -23,7 +26,7 @@ export const apps: App[] = [
     {
         label: "洛伦兹变换",
         descrition: "狭义相对论的灵魂内容",
-        cover: require("../view/apps/Relativity/cover.jpg").default,
+        cover: RelativityCover,
         id: "relativity",
         component: Relativity,
         tags: ["物理", "相对论"],
@@ -31,7 +34,7 @@ export const apps: App[] = [
     {
         label: "复平面",
         descrition: "“想象中的数字”",
-        cover: require("../view/apps/ComplexPanel/cover2.png").default,
+        cover: ComplexCover,
         id: "complex-panel",
         component: ComplexPanel,
         tags: ["初等数学"],
@@ -39,7 +42,7 @@ export const apps: App[] = [
     {
         label: "向量场",
         descrition: "简单的线性向量场",
-        cover: require("../view/apps/VectorsField/cover.png").default,
+        cover: VectorsFieldCover,
         id: "vectors-field",
         component: VectorsField,
         tags: ["初等数学"],

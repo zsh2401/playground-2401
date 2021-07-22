@@ -1,87 +1,30 @@
 {
   "name": "playground-2401",
-  "version": "2.1.0",
-  "sz_rat": {
-    "version": "12.0.0",
-    "vname": "Venus",
-    "description": "Seymour Zhang's React Application Template",
-    "repo": "https://github.com/zsh2401/sz-rat"
-  },
-  "engines": {
-    "node": ">= 14"
-  },
-  "description": "An application powered by sz-rat",
-  "main": "./scripts/server",
+  "version": "0.0.0",
   "scripts": {
-    "deploy": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" ts-node ./deploy.ts",
-    "test": "jest",
-    "build": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.prod.ts",
-    "build:dev": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.dev.ts",
-    "start": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack serve --config ./webpack.config.dev.ts",
-    "start:prod": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack serve --config ./webpack.config.prod.ts"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
-  "keywords": [
-    "react",
-    "react-router",
-    "SPA",
-    "PWA"
-  ],
-  "author": "zsh2401",
-  "license": "MIT",
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/react-hooks": "^5.1.2",
-    "@types/connect-history-api-fallback": "^1.3.4",
-    "@types/copy-webpack-plugin": "^8.0.0",
-    "@types/html-webpack-plugin": "^3.2.5",
-    "@types/jest": "^26.0.23",
-    "@types/lodash": "^4.14.168",
-    "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.4",
-    "@types/react-loadable": "^5.5.5",
-    "@types/react-router-dom": "^5.1.7",
-    "@types/webpack": "^5.28.0",
-    "@types/webpack-bundle-analyzer": "^4.4.0",
-    "@types/workbox-webpack-plugin": "^5.1.6",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "connect-history-api-fallback": "^1.6.0",
-    "copy-webpack-plugin": "^8.1.1",
-    "cross-env": "^7.0.3",
-    "css-loader": "^5.2.4",
-    "file-loader": "^6.2.0",
-    "gh-pages": "^3.1.0",
-    "html-webpack-plugin": "^5.3.1",
-    "jest": "^26.6.3",
-    "popper.js": "^1.16.1",
-    "process": "^0.11.10",
-    "style-loader": "^2.0.0",
-    "ts-jest": "^26.5.6",
-    "ts-loader": "^9.1.2",
-    "ts-node": "^9.1.1",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.2.4",
-    "url-loader": "^4.1.1",
-    "webpack": "5.37.0",
-    "webpack-bundle-analyzer": "^4.4.1",
-    "webpack-cli": "4",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-parallel-uglify-plugin": "^2.0.0",
-    "webpack-pwa-manifest": "^4.3.0",
-    "workbox-webpack-plugin": "^6.1.5"
-  },
+  "description": "Seymour Zhang's Computer Science Playground.",
+  "author": "Seymour Zhang<zsh2401@163.com>",
   "dependencies": {
     "antd": "^4.15.5",
     "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-use": "^17.2.4",
     "sz-react-support": "^0.0.5",
-    "tdscore": "^0.1.34"
+    "tdscore": "0.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.3"
   }
 }

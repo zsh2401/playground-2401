@@ -1,5 +1,5 @@
 import React from "react"
-//@ts-expect-error
+//@ts-ignore
 import css from "./metadata.css"
 import { math } from "tdscore";
 import { Fn } from ".";

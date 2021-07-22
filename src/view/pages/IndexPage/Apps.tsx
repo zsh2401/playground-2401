@@ -15,7 +15,7 @@ export default function () {
             <Row justify="center">
                 {
                     apps.map(app => {
-                        return <Col key={app.id} md={8} sm={12}>
+                        return <Col key={app.id} md={4} sm={8}>
                             <Card
                                 onClick={() => {
                                     history.push(`/app/${app.id}`)

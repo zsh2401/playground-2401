@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { IStdProps } from "sz-react-support"
-import { math, Func1, MixedNumber, DSNumber } from "tdscore"
-import "tdscore/lib/ext"
+import { Func1, MixedNumber, DSNumber } from "tdscore"
 import { Martix, Vector2 } from "tdscore/lib/math";
 import Transformation2 from "tdscore/lib/math/martix/Transformation2";
 const SUPPORT_GRAPH_REDUNDANCY_RATE = 10000;

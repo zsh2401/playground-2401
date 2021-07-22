@@ -1,4 +1,4 @@
-import "!!style-loader!css-loader?modules=false!nprogress/nprogress.css"
+import "nprogress/nprogress.css"
 import nProgress from "nprogress"
 
 
@@ -6,7 +6,6 @@ import nProgress from "nprogress"
  * entry point
  */
 main();
-
 
 
 async function main() {
@@ -28,9 +27,10 @@ async function registerServiceWorker() {
 }
 
 async function downloadAndRunApplication() {
+    console.log("downloading app")
     const app = await import("./App");
+    console.log("donwloaded")
     app.default();
-
 }
 
 async function autoUpdate() {
