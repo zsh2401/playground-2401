@@ -2,9 +2,6 @@ import React, { useEffect } from 'react'
 import { useAppContext } from '../../../AppContext'
 //@ts-ignore
 import css from "./index.css"
-import { Vector2 } from 'tdscore/lib/math'
-import Graph2D from '../../components/Graph2D'
-import { math as DSMath } from 'tdscore'
 import Apps from "./Apps"
 import TitleScreen from "./TitleScreen"
 export default function () {

@@ -1,5 +1,5 @@
 import React from "react"
-import { Martix, Vector2 } from "tdscore/lib/math"
+import { Vector2 } from "tdscore/lib/math"
 import Graph2D from "../../components/Graph2D"
 const vectors: Vector2[] = [];
 (() => {
@@ -15,12 +15,6 @@ export default function () {
     return <Graph2D
         width="1200"
         height="600"
-        // transformation={new Martix(
-        //     [
-        //         [3, 0.3],
-        //         [0, 1]
-        //     ]
-        // )}
         grid
         scaleRatio={20}
         vectors={vectors}

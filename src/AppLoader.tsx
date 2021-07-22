@@ -27,9 +27,8 @@ async function registerServiceWorker() {
 }
 
 async function downloadAndRunApplication() {
-    console.log("downloading app")
-    const app = await import("./App");
-    console.log("donwloaded")
+
+    const app = await import(/* webpackChunkName: "full_app" */"./App");
     app.default();
 }
 
