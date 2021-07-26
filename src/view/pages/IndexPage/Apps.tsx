@@ -3,6 +3,7 @@ import Meta from "antd/lib/card/Meta"
 import React from "react"
 import { useAppContext } from "../../../AppContext"
 import { colorMap } from "../../../common/app-registration"
+
 export default function () {
     const { apps, history } = useAppContext()
     return <>
@@ -15,7 +16,7 @@ export default function () {
             <Row justify="center">
                 {
                     apps.map(app => {
-                        return <Col key={app.id} md={4} sm={8}>
+                        return <Col key={app.id} md={8} sm={12}>
                             <Card
                                 onClick={() => {
                                     history.push(`/app/${app.id}`)

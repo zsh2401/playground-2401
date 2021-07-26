@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { useAppContext } from '../../../AppContext'
 //@ts-ignore
-import css from "./index.css"
+import css from "./index.module.css"
 import Apps from "./Apps"
 import TitleScreen from "./TitleScreen"
+
 export default function () {
 
   const ctx = useAppContext()

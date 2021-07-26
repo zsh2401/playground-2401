@@ -3,6 +3,7 @@ import { useWindowSize } from "react-use"
 import { math } from "tdscore"
 import { max, Vector2 } from "tdscore/lib/math"
 import Graph2D from "../../components/Graph2D"
+import tdscorePkg from "tdscore/package.json"
 export default function () {
     const width = max(useWindowSize().width / 2, 300)
 
@@ -38,8 +39,8 @@ export default function () {
             textAlign: "center"
         }}>
             <h2>Seymour Zhang's <br />Computer Science Playground</h2>
-            <p>Powered by 
-                <a href="https://ds.zsh2401.top" target="_blank"> TDSCore</a>
+            <p>Powered by
+                <a href={tdscorePkg.homepage} target="_blank"> {tdscorePkg.name} {tdscorePkg.version}</a>
             </p>
         </div>
     </div>
