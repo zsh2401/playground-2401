@@ -19,7 +19,7 @@ async function main() {
 async function registerServiceWorker() {
     try {
         console.log("Registering Service Worker.");
-        const registration = await navigator.serviceWorker.register("service-worker.js")
+        const registration = await navigator.serviceWorker.register("sw.js")
         console.log("Service Worker has been registered. " + registration);
     } catch (err) {
         console.log("Service Worker registration failed: ", err)
@@ -28,7 +28,7 @@ async function registerServiceWorker() {
 
 async function downloadAndRunApplication() {
 
-    const app = await import(/* webpackChunkName: "full_app" */"./App");
+    const app = await import("./App");
     app.default();
 }
 
@@ -38,7 +38,7 @@ async function autoUpdate() {
         console.log("Update has been found.")
         console.log("Updating application.")
         registration.update()
-        console.log("Application has been updated.")
+        console.log("Application has been updated. Update will be applied when next launch.")
     })
 }
 

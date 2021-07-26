@@ -10,13 +10,14 @@ import { createHashHistory } from "history"
 import { apps } from "./common/app-registration"
 import "tdscore"
 
+
 export default function () {
     ReactDOM.render(<App />
         , document.querySelector("#app"));
 }
 
 function App() {
-    console.log("run app")
+
     const history = useMemo(() => createHashHistory(), [])
     const [navbarVisible, setNavbarVisible] = useState(true)
     const [footbarVisible, setFootbarVisible] = useState(true)

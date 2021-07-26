@@ -19,6 +19,7 @@ export default function (props: ComplexPanelProps) {
                 real = (number as Complex).real
                 img = (number as Complex).imaginary
             } else {
+                //@ts-ignore
                 real = (number as DSNumber).toJSNumber()
             }
             return {
